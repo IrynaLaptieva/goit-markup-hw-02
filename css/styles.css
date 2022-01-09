@@ -1,0 +1,26 @@
+body {
+  background: #e5e5e5;
+  color: #212121;
+}
+
+:root {
+  --paragraph-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-text-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --adress-text-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Логотип */
+
+.logo {
+  color: #2196f3;
+}
+
+.logopart1 {
+  color: #000000;
+}
+
+.logopart2 {
+  color: #ffffff;
+}
