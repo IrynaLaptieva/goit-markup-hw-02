@@ -16,6 +16,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 /* Логотип */
 
 .logo {
@@ -97,6 +101,14 @@ body {
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #188ce8;
+  color: #ffffff;
 }
 
 /*Section*/
@@ -167,7 +179,23 @@ body {
   letter-spacing: 0.03em;
 }
 
+.info .item:hover,
+.info .item:focus {
+  color: var(--accent-color);
+}
+
 /* Сайт Портфолио */
+
+.services .link {
+  cursor: pointer;
+  background-color: #f5f4fa;
+}
+
+.services .link:hover,
+.services .link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
 
 .projects-title {
   font-weight: 700;
