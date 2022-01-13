@@ -3,21 +3,26 @@
   --paragraph-text-color: #757575; /*цвет параграфов*/
   --title-text-color: #212121; /*цвет заголовков*/
   --accent-color: #2196f3; /*цвет акцентов*/
-  --primary-white-color: #ffffff; /*цвет преимущественного*/
+  --primary-light-color: #ffffff; /*цвет преимущественного*/
   --adress-text-color: rgba(255, 255, 255, 0.6); /*цвет текста в футере*/
+  --logo-part1-color: #000000;
+  --bgc-team-color: #f5f4fa;
 }
 
 /* Сайт Студия */
 
 body {
-  background: #e5e5e5;
-  color: #212121;
-
+  color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
+  font-size: 14px;
 }
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Логотип */
@@ -32,7 +37,7 @@ ul {
 }
 
 .logopart1 {
-  color: #000000;
+  color: var(--logo-part1-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -41,7 +46,7 @@ ul {
 }
 
 .logopart2 {
-  color: var(--primary-white-color);
+  color: var(--primary-light-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -51,40 +56,42 @@ ul {
 
 /* site-nav*/
 
-.site-nav .link {
-  color: #212121;
+.nav .nav-link {
+  color: var(--title-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.02em;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav .nav-link:hover,
+.nav .nav-link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.nav .nav-link.current {
   color: var(--accent-color);
 }
 
-.contacts .contacts-item {
+.header-contacts-link {
   color: var(--paragraph-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.02em;
 }
 
-.contacts .contacts-item:hover,
-.contacts .contacts-item:focus {
+.header-contacts-link:hover,
+.header-contacts-link:focus {
   color: var(--accent-color);
 }
 
 /*Hero*/
 
+.hero {
+  background-color: #2f303a;
+}
+
 .hero-title {
-  color: var(--primary-white-color);
+  color: var(--primary-light-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -95,7 +102,8 @@ ul {
 
 .btn {
   background-color: var(--accent-color);
-  color: var(--primary-white-color);
+  color: var(--primary-light-color);
+  font-family: Roboto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -103,19 +111,21 @@ ul {
   letter-spacing: 0.06em;
 
   cursor: pointer;
+
+  border: none;
+  border-radius: 4px;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: #188ce8;
-  color: #ffffff;
+  color: var(--primary-light-color);
 }
 
 /*Section*/
 
 .section-title {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -124,7 +134,6 @@ ul {
 .section .paragraph {
   color: var(--paragraph-text-color);
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
@@ -138,10 +147,10 @@ ul {
 }
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--bgc-team-color);
 }
 
-.name {
+.team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -162,49 +171,63 @@ ul {
   background-color: #2f303a;
 }
 
-.city {
-  color: var(--primary-white-color);
+.street-address {
+  color: var(--primary-light-color);
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.info .item {
+.footer-contacts-link {
   color: rgba(255, 255, 255, 0.6);
-
+  font-style: normal;
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.info .item:hover,
-.info .item:focus {
+.footer-contacts-link:hover,
+.footer-contacts-link:focus {
   color: var(--accent-color);
 }
 
 /* Сайт Портфолио */
 
-.services .link {
+.portfolio-link {
   cursor: pointer;
-  background-color: #f5f4fa;
+
+  background-color: var(--bgc-team-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  border: none;
+  border-radius: 4px;
 }
 
-.services .link:hover,
-.services .link:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
   background-color: var(--accent-color);
-  color: var(--primary-white-color);
+  color: var(--primary-light-color);
 }
 
-.projects-title {
+.portfolio-link.current {
+  color: var(--primary-light-color);
+  background-color: var(--accent-color);
+}
+
+.portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.projects-item {
+.portfolio-item {
   color: var(--paragraph-text-color);
   font-weight: 400;
   font-size: 16px;
